@@ -2,7 +2,7 @@
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useFormik } from "formik";
-
+import {API} from "./global";
 
 
 export function Reset() {
@@ -19,7 +19,7 @@ export function Reset() {
     },
     onSubmit:async (values)=>{
       console.log(values)
-     const data= await fetch(`http://localhost:4000/user/reset-password/${params.get("id")}/${params.get("token")}`,{
+     const data= await fetch(`${API}/reset-password/${params.get("id")}/${params.get("token")}`,{
      method:"POST",
      headers: {"Content-type": "application/json",},
      body:JSON.stringify(values)

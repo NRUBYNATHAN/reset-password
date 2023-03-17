@@ -1,6 +1,7 @@
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useFormik } from "formik";
+import {API} from "./global";
 export function Forgot() {
   const {values,handleChange,handleSubmit}=useFormik({
     initialValues:{
@@ -8,7 +9,7 @@ export function Forgot() {
     },
     onSubmit:async (values)=>{
          console.log(values)
-        const data= await fetch("http://localhost:4000/user/forgot-password",{
+        const data= await fetch(`${API}/forgot-password`,{
         method:"POST",
         headers: {"Content-type": "application/json",},
         body:JSON.stringify(values)

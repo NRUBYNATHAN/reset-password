@@ -1,7 +1,7 @@
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useFormik } from "formik";
-
+import {API} from "./global";
 
 export function SignUp() {
  
@@ -14,7 +14,7 @@ export function SignUp() {
     },
     onSubmit:async (values)=>{
       console.log(values)
-     const data= await fetch("http://localhost:4000/user/signup",{
+     const data= await fetch(`${API}/signup`,{
      method:"POST",
      headers: {"Content-type": "application/json",},
      body:JSON.stringify(values)
