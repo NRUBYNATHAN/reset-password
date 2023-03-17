@@ -1,0 +1,26 @@
+.forgot{
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap:20px;
+  margin: 200px auto;
+}
+.signup{
+  
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap:20px;
+  margin: 100px auto;
+}
+.reset{
+  
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  gap:20px;
+  margin: 100px auto;
+}
+body{
+  margin: 0px;
+}
